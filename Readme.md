@@ -1,6 +1,6 @@
-### Wallet Risk Scoring System
+# Wallet Risk Scoring System
 ## 1. Transaction History Fetching Process
-# API Integration Layer
+### API Integration Layer
 The system uses Etherscan's txlist API endpoint with these key parameters:
 
 ```python
@@ -14,7 +14,7 @@ params = {
     'apikey': ETHERSCAN_API_KEY
 }
 ```
-# Technical Considerations:
+### Technical Considerations:
 
 ** Block Range: ** Scans entire blockchain history (blocks 0 to 99,999,999) 
 
@@ -28,7 +28,7 @@ Returns empty list for API failures
 
 Implements 200ms delay between calls to prevent rate limiting
 
-# Compound-Specific Filtering
+### Compound-Specific Filtering
 The system identifies Compound transactions by:
 
 Checking recipient address matches Compound V2 main contract
@@ -47,7 +47,7 @@ Example Transaction Flow:
 
 ## 2. Data Processing Pipeline
 Feature Engineering Details
-# Core Features:
+### Core Features:
 
 Collateral Health Metrics:
 
